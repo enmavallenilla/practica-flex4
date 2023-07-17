@@ -1,0 +1,178 @@
+:root {
+
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    --Blue: hsl(248, 32%, 49%);
+
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Red);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/** Main **/
+.main {
+
+    background-image: url(/practica-flex4/images/bg-intro-mobile.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main__content {
+    padding: 4rem 0 3rem;
+}
+
+.main__title {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1.2;
+}
+
+.main__parrafo {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.815);
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+
+/**form **/
+.form__link {
+    background-color: var(--Blue);
+    padding: 1rem 2rem;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    border-radius: .6rem;
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 3rem;
+}
+
+.form__link span {
+    color: rgba(255, 255, 255, 0.767);
+    font-weight: 400;
+}
+
+.form {
+    background-color: white;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: .8rem;
+}
+
+.form__contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__contenedor__input {
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    padding: 1.5rem .3rem .5rem;
+    border-color: rgba(105, 104, 104, 0.274);
+    border-radius: .3rem;
+    border-width: 1px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form__label {
+    position: absolute;
+    top: .8rem;
+    left: .7rem;
+    color: var(--Grayish-Blue);
+    transition: transform .5s;
+}
+
+.form__input:not(:placeholder-shown)+.form__label,
+.form__input:focus+.form__label {
+    transform: translateY(-.7rem) scale(.9);
+    transform-origin: left top;
+    color: var(--Blue);
+}
+
+.form__boton {
+    padding: 1rem 0;
+    background-color: var(--Green);
+    border: none;
+    border-radius: .2rem;
+    width: 100%;
+    margin-top: 1rem;
+    color: white;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+.form__parrafo {
+    text-align: center;
+    font-size: .9rem;
+    color: var(--Grayish-Blue);
+    margin-top: 1rem;
+}
+
+.form__parrafo a {
+    text-decoration: none;
+    color: var(--Red);
+    font-weight: 600;
+}
+
+@media(min-width:768px) {
+
+
+
+    /** Main **/
+    .main {
+        background-image: url(/practica-flex4/images/bg-intro-desktop.png);
+    }
+
+    .main__content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .main__contenedor__texts {
+        width: 50%;
+    }
+
+    .section__form {
+        width: 45%;
+    }
+
+    .main__title {
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .main__parrafo {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+
+
+}
