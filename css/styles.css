@@ -25,6 +25,16 @@ body {
     margin: 0 auto;
 }
 
+.bg-red-600 {
+    background-color: red;
+    padding: .5rem;
+    width: 100%;
+    margin-top: .5rem;
+}
+.text-white{
+    color: white;
+    text-align: center;
+}
 /** Main **/
 .main {
 
